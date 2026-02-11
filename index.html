@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
+        <!-- Prevent flash of wrong theme -->
+        <script>
+            (function() {
+                var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-bs-theme', t);
+            })();
+        </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4W0J4WZRP"></script>
         <script>
@@ -12,320 +19,443 @@
                 'cookie_flags': 'SameSite=None;Secure'
             });
         </script>
-        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Yuxuan Lou's homepage</title>
+        <meta name="description" content="Yuxuan Lou – Ph.D. student in Computer Science at the National University of Singapore, working on diffusion large language models, mixture of experts, and multimodal foundation models." />
+        <meta name="author" content="Yuxuan Lou" />
+        <meta name="keywords" content="Yuxuan Lou, NUS, Computer Science, Ph.D., Diffusion LLM, Mixture of Experts, Multimodal, HPC-AI Lab, Yang You" />
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Yuxuan Lou | NUS Computer Science Ph.D." />
+        <meta property="og:description" content="Ph.D. student at NUS working on diffusion large language models, mixture of experts, and multimodal foundation models." />
+        <meta property="og:url" content="https://yuxuanlou.info" />
+        <meta property="og:image" content="https://yuxuanlou.info/assets/img/resume_2.jpg" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Yuxuan Lou | NUS Computer Science Ph.D." />
+        <meta name="twitter:description" content="Ph.D. student at NUS working on diffusion large language models, mixture of experts, and multimodal foundation models." />
+        <title>Yuxuan Lou | NUS Computer Science Ph.D.</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- Preconnect for performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <!-- Google Fonts (css2 API with display=swap) -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Saira+Extra+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+        <!-- Font Awesome 6 CSS (replaces FA5 JS bundle, ~60KB vs ~1.3MB) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap 5.3.3 CSS (from CDN, with built-in dark mode) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <!-- Custom theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Yuxuan Lou",
+            "url": "https://yuxuanlou.info",
+            "jobTitle": "Ph.D. Student in Computer Science",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "National University of Singapore"
+            },
+            "alumniOf": [
+                {"@type": "Organization", "name": "Fudan University"},
+                {"@type": "Organization", "name": "National University of Singapore"},
+                {"@type": "Organization", "name": "Harvard University"}
+            ],
+            "sameAs": [
+                "https://github.com/yuxuan-lou",
+                "https://scholar.google.com/citations?user=UfOXNK8AAAAJ"
+            ]
+        }
+        </script>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Yuxuan Lou</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/resume_2.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/resume_2.jpg" alt="Yuxuan Lou" width="160" height="160" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#news">News</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research-interest">Research Interest</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research-experiences">Research Experiences</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#open-source-projects">Open Source Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professional-experience">Professional Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research-experiences">Research</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#open-source-projects">Open Source</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professional-experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#activities-interests">Activities & Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#activities-interests">Interests</a></li>
                 </ul>
             </div>
+            <div class="dark-mode-toggle-wrapper">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon" id="darkModeIcon"></i>
+                </button>
+            </div>
         </nav>
-        <!-- Page Content-->
+        <!-- Page Content -->
         <div class="container-fluid p-0">
-            <!-- About-->
+            <!-- About -->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Yuxuan Lou
-                    </h1>
-                    <div class="subheading mb-5">
-                        National University of Singapore, Singapore<br>
-                        <a href="mailto:yuxuanlou@u.nus.edu">yuxuanlou@u.nus.edu</a> | +65 82600153<br>
-                        <a href="https://yuxuanlou.info/">yuxuanlou.info</a> | <a href="https://scholar.google.com/citations?user=UfOXNK8AAAAJ&hl=zh-CN">Google Scholar</a> | <a href="https://github.com/yuxuan-lou?tab=overview&from=2025-07-01&to=2025-07-07">Github</a>
+                    <h1 class="mb-0">Yuxuan <span class="text-primary">Lou</span></h1>
+                    <div class="subheading mb-3">
+                        Ph.D. Student in Computer Science · National University of Singapore
                     </div>
-                    <p class="lead mb-5">Here is Yuxuan Lou, a Ph.D student majoring in Computer Science at NUS. My advisor is <a href="https://www.comp.nus.edu.sg/~youy/">Prof. Yang You</a>. I received my B.Sc. in Applied Mathematics from Fudan University and M.Sc. in Statistics from NUS. I was also a research intern at Harvard University. My research interests lie in diffusion large language models, efficient LLM scaling with Mixture of Experts, and multimodal foundation model adaptation from large language models. I am currently working on speech-text diffusion models, scalable MoE architectures, and large-scale pretrained models. You can also check my CV <a href="assets/CV_Yuxuan_Lou(2026.2).pdf">here</a> or visit my <a href="https://scholar.google.com/citations?user=UfOXNK8AAAAJ">Google Scholar Page</a> for further information.</p>
+                    <div class="contact-info mb-3">
+                        <a href="mailto:yuxuanlou@u.nus.edu"><i class="fas fa-envelope me-1"></i>yuxuanlou@u.nus.edu</a>
+                        <span class="mx-2">·</span>
+                        <span><i class="fas fa-phone me-1"></i>+65 82600153</span>
+                    </div>
+                    <div class="social-icons mb-4">
+                        <a class="social-icon" href="https://github.com/yuxuan-lou" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://scholar.google.com/citations?user=UfOXNK8AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+                        <a class="social-icon" href="mailto:yuxuanlou@u.nus.edu" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a class="social-icon" href="assets/CV_Yuxuan_Lou(2026.2).pdf" target="_blank" rel="noopener" title="Download CV"><i class="fas fa-file-pdf"></i></a>
+                    </div>
+                    <p class="lead mb-0">I am a Ph.D. student in Computer Science at the National University of Singapore, advised by <a href="https://www.comp.nus.edu.sg/~youy/">Prof. Yang You</a>. I received my B.Sc. in Applied Mathematics from Fudan University and M.Sc. in Statistics from NUS. I was also a research intern at Harvard University. My research interests lie in diffusion large language models, efficient LLM scaling with Mixture of Experts, and multimodal foundation model adaptation from large language models. I am currently working on speech-text diffusion models, scalable MoE architectures, and large-scale pretrained models.</p>
+                </div>
             </section>
             <hr class="m-0" />
-            <!-- Research Interest-->
+            <!-- News -->
+            <section class="resume-section" id="news">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">News</h2>
+                    <div class="news-list">
+                        <div class="news-item fade-in-section">
+                            <span class="news-date">Jan 2026</span>
+                            <span class="news-text">Our paper <a href="https://arxiv.org/abs/2601.22889"><strong>DiffuSpeech</strong></a> is released — the first diffusion-based speech-text language model supporting both understanding and generation.</span>
+                        </div>
+                        <div class="news-item fade-in-section">
+                            <span class="news-date">Sep 2025</span>
+                            <span class="news-text">Started research internship at <strong>Tencent ARC Lab</strong>, working on diffusion-based speech-text models.</span>
+                        </div>
+                        <div class="news-item fade-in-section">
+                            <span class="news-date">Jan 2025</span>
+                            <span class="news-text">Our paper <a href="https://arxiv.org/abs/2601.10272"><strong>MoST</strong></a> is released with <a href="https://github.com/NUS-HPC-AI-Lab/MoST">code</a> — a modality-aware MoE for speech-text foundation models.</span>
+                        </div>
+                        <div class="news-item fade-in-section">
+                            <span class="news-date">Oct 2024</span>
+                            <span class="news-text">Our paper <a href="https://arxiv.org/abs/2410.16919"><strong>EnvBridge</strong></a> is released — cross-environment knowledge transfer for embodied AI.</span>
+                        </div>
+                        <div class="news-item fade-in-section">
+                            <span class="news-date">Feb 2024</span>
+                            <span class="news-text">Our paper <a href="https://arxiv.org/abs/2402.03610"><strong>RAP</strong></a> is released — retrieval-augmented planning for multimodal LLM agents.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Research Interest -->
             <section class="resume-section" id="research-interest">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Research Interest</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Diffusion Large Language Models
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Efficient Large Language Model Scaling with Mixture of Experts
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Multimodal Foundation Model Adaptation from Large Language Models
-                        </li>
+                    <ul class="research-interest-list mb-0">
+                        <li>Diffusion Large Language Models</li>
+                        <li>Efficient Large Language Model Scaling with Mixture of Experts</li>
+                        <li>Multimodal Foundation Model Adaptation from Large Language Models</li>
                     </ul>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Education-->
+            <!-- Education -->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4 fade-in-section">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">National University of Singapore, Singapore</h3>
-                            <div class="subheading mb-3">Ph.D. in Computer Science</div>
+                            <h3 class="mb-0">National University of Singapore</h3>
+                            <div class="subheading mb-1">Ph.D. in Computer Science</div>
                             <div>School of Computing, HPC-AI Lab</div>
                             <div>Advised by Prof. Yang You</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023 – Present</span></div>
+                        <div class="flex-shrink-0"><span class="date-badge text-primary">2023 – Present</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4 fade-in-section">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">National University of Singapore, Singapore</h3>
-                            <div class="subheading mb-3">M.Sc. in Statistics</div>
+                            <h3 class="mb-0">National University of Singapore</h3>
+                            <div class="subheading mb-1">M.Sc. in Statistics</div>
                             <div>School of Statistics and Probability</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2020 – 2022</span></div>
+                        <div class="flex-shrink-0"><span class="date-badge text-primary">2020 – 2022</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4 fade-in-section">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Harvard University, Cambridge, USA</h3>
-                            <div class="subheading mb-3">Research Intern</div>
+                            <h3 class="mb-0">Harvard University</h3>
+                            <div class="subheading mb-1">Research Intern</div>
                             <div>Computer Science Department, DAS Lab</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2019 – 2020</span></div>
+                        <div class="flex-shrink-0"><span class="date-badge text-primary">2019 – 2020</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between fade-in-section">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Fudan University, Shanghai, China</h3>
-                            <div class="subheading mb-3">B.Sc. in Applied Mathematics</div>
+                            <h3 class="mb-0">Fudan University</h3>
+                            <div class="subheading mb-1">B.Sc. in Applied Mathematics</div>
                             <div>School of Mathematical Science</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2016 – 2020</span></div>
+                        <div class="flex-shrink-0"><span class="date-badge text-primary">2016 – 2020</span></div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Publications-->
+            <!-- Publications -->
             <section class="resume-section" id="publications">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Selected Publications</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">DiffuSpeech: Silent Thought, Spoken Answer via Unified Speech-Text Diffusion</h3>
-                            <div class="subheading mb-3"><strong>Yuxuan Lou*</strong>, Ziming Wu*, Yaochen Wang, Yong Liu, Yingxuan Ren, Fuming Lai, Shaobing Lian, Jie Tang, Yang You</div>
-                            <div>2026</div>
-                            <p><a href="https://arxiv.org/abs/2601.22889">[arXiv]</a></p>
+                    <!-- DiffuSpeech -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>DiffuSpeech: Silent Thought, Spoken Answer via Unified Speech-Text Diffusion</h3>
+                        <p class="pub-authors mb-1"><strong>Yuxuan Lou*</strong>, Ziming Wu*, Yaochen Wang, Yong Liu, Yingxuan Ren, Fuming Lai, Shaobing Lian, Jie Tang, Yang You</p>
+                        <span class="date-badge text-primary">2026</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.22889" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">MoST: Modality-Aware Mixture of Experts for Efficient Speech-Text Foundation Model</h3>
-                            <div class="subheading mb-3"><strong>Yuxuan Lou</strong>, Kai Yang, Yang You</div>
-                            <div>2025</div>
-                            <p><a href="https://arxiv.org/abs/2601.10272">[arXiv]</a> <a href="https://github.com/NUS-HPC-AI-Lab/MoST">[Github]</a></p>
+                    <!-- MoST -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>MoST: Modality-Aware Mixture of Experts for Efficient Speech-Text Foundation Model</h3>
+                        <p class="pub-authors mb-1"><strong>Yuxuan Lou</strong>, Kai Yang, Yang You</p>
+                        <span class="date-badge text-primary">2025</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.10272" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/MoST" class="pub-link" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Code</a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">MoRS: Distill Large Language Model into Mixture of Reasoning Students</h3>
-                            <div class="subheading mb-3"><strong>Yuxuan Lou</strong>, Yang You</div>
-                            <div>2025, In Submission</div>
+                    <!-- MoRS -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>MoRS: Distill Large Language Model into Mixture of Reasoning Students <span class="badge-status">In Submission</span></h3>
+                        <p class="pub-authors mb-1"><strong>Yuxuan Lou</strong>, Yang You</p>
+                        <span class="date-badge text-primary">2025</span>
+                    </div>
+                    <!-- EnvBridge -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>EnvBridge: Bridging Diverse Environments with Cross-Environment Knowledge Transfer for Embodied AI</h3>
+                        <p class="pub-authors mb-1">Tomoyuki Kagaya*, <strong>Yuxuan Lou*</strong>, Thong Jing Yuan*, Subramanian Lakshmi*, Jayashree Karlekar, Sugiri Pranata, Natsuki Murakami, Akira Kinose, Koki Oguri, Felix Wick, Yang You</p>
+                        <span class="date-badge text-primary">2024</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2410.16919" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">EnvBridge: Bridging Diverse Environments with Cross-Environment Knowledge Transfer for Embodied AI</h3>
-                            <div class="subheading mb-3">Tomoyuki Kagaya*, <strong>Yuxuan Lou*</strong>, Thong Jing Yuan*, Subramanian Lakshmi*, Jayashree Karlekar, Sugiri Pranata, Natsuki Murakami, Akira Kinose, Koki Oguri, Felix Wick, Yang You</div>
-                            <div>2024</div>
-                            <p><a href="http://arxiv.org/abs/2410.16919">[arXiv]</a></p>
+                    <!-- RAP -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>RAP: Retrieval-Augmented Planning with Contextual Memory for Multimodal LLM Agents</h3>
+                        <p class="pub-authors mb-1">Tomoyuki Kagaya*, <strong>Yuxuan Lou*</strong>, Thong Jing Yuan*, Subramanian Lakshmi*, Jayashree Karlekar, Sugiri Pranata, Natsuki Murakami, Akira Kinose, Koki Oguri, Felix Wick, Yang You</p>
+                        <span class="date-badge text-primary">2024</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2402.03610" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">RAP: Retrieval-Augmented Planning with Contextual Memory for Multimodal LLM Agents</h3>
-                            <div class="subheading mb-3">Tomoyuki Kagaya*, <strong>Yuxuan Lou*</strong>, Thong Jing Yuan*, Subramanian Lakshmi*, Jayashree Karlekar, Sugiri Pranata, Natsuki Murakami, Akira Kinose, Koki Oguri, Felix Wick, Yang You</div>
-                            <div>2024</div>
-                            <p><a href="https://arxiv.org/abs/2402.03610">[arXiv]</a></p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Cross-token Modeling with Conditional Computation</h3>
-                            <div class="subheading mb-3"><strong>Yuxuan Lou</strong>, Fuzhao Xue, Zangwei Zheng, Yang You</div>
-                            <div>2022</div>
-                            <p><a href="https://arxiv.org/abs/2109.02008">[arXiv]</a></p>
+                    <!-- Cross-token -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>Cross-token Modeling with Conditional Computation</h3>
+                        <p class="pub-authors mb-1"><strong>Yuxuan Lou</strong>, Fuzhao Xue, Zangwei Zheng, Yang You</p>
+                        <span class="date-badge text-primary">2022</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2109.02008" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                         </div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Research Experience-->
+            <!-- Research Experiences -->
             <section class="resume-section" id="research-experiences">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Research Experiences</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Diffusion-based Speech-Text Language Model</h3>
-                            <div class="subheading mb-3">NUS - Tencent</div>
-                            <p>Developed <strong>DiffuSpeech</strong>, the first diffusion-based speech-text language model supporting both understanding and generation, introducing a "Silent Thought, Spoken Answer" paradigm where internal text reasoning informs spoken responses. Unified discrete text and tokenized speech under a single masked diffusion framework with modality-specific masking schedules, enabling joint generation of reasoning traces and speech tokens through iterative denoising. Constructed <strong>ThinkingTalk</strong>, the first speech QA dataset with paired text reasoning traces (26K samples, 319 hours), achieving state-of-the-art speech-to-speech QA accuracy (+9 points over best baseline) and best TTS quality among generative models (6.2% WER).</p>
-                            <p><strong>Key Words:</strong> Diffusion Language Models, Speech-Text Generation, Multimodal Reasoning, Speech QA</p>
+                    <!-- DiffuSpeech -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">Diffusion-based Speech-Text Language Model</h3>
+                                <div class="subheading">NUS - Tencent</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Sep 2025 – Present</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Sep 2025 – Present</span></div>
+                        <p>Developed <strong>DiffuSpeech</strong>, the first diffusion-based speech-text language model supporting both understanding and generation, introducing a "Silent Thought, Spoken Answer" paradigm where internal text reasoning informs spoken responses. Unified discrete text and tokenized speech under a single masked diffusion framework with modality-specific masking schedules. Constructed <strong>ThinkingTalk</strong>, the first speech QA dataset with paired text reasoning traces (26K samples, 319 hours), achieving state-of-the-art speech-to-speech QA accuracy (+9 points over best baseline) and best TTS quality among generative models (6.2% WER).</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Diffusion LLM</span>
+                            <span class="keyword-tag">Speech-Text</span>
+                            <span class="keyword-tag">Multimodal Reasoning</span>
+                            <span class="keyword-tag">Speech QA</span>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Efficient Foundation Models with Mixture of Experts</h3>
-                            <div class="subheading mb-3">NUS - Apple</div>
-                            <p>Developed <strong>MoST</strong>, a novel speech-text foundation model featuring a Modality-Aware Mixture of Experts (MAMOE) architecture which directs tokens to specialized pathways for enhanced cross-modal understanding; achieved competitive performance across multiple speech-text benchmarks using exclusively open-source data. Developed <strong>MoRS</strong> (Mixture of Reasoning Students), a four-stage distillation method that compresses large language models (70B parameters) into efficient mixture-of-experts architectures (12B parameters, 3B activated) while preserving specialized reasoning capabilities, achieving up to +14.5% on reasoning benchmarks. Created the first framework to distill dense language models into MoE architectures without relying on pre-existing small models, using domain-specific expert specialization with a shared-expert design for optimal knowledge integration.</p>
-                            <p><strong>Key Words:</strong> Multimodal Foundation Models, Mixture of Experts, Knowledge Distillation, Model Compression</p>
+                    <!-- MoE -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">Efficient Foundation Models with Mixture of Experts</h3>
+                                <div class="subheading">NUS - Apple</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Sep 2024 – May 2025</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Sep 2024 – May 2025</span></div>
+                        <p>Developed <strong>MoST</strong>, a novel speech-text foundation model featuring a Modality-Aware Mixture of Experts (MAMOE) architecture; achieved competitive performance across multiple speech-text benchmarks using exclusively open-source data. Developed <strong>MoRS</strong>, a four-stage distillation method that compresses large language models (70B) into efficient MoE architectures (12B, 3B activated) while preserving reasoning capabilities, achieving up to +14.5% on benchmarks. Created the first framework to distill dense LMs into MoE without relying on pre-existing small models.</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Mixture of Experts</span>
+                            <span class="keyword-tag">Foundation Models</span>
+                            <span class="keyword-tag">Knowledge Distillation</span>
+                            <span class="keyword-tag">Speech-Text</span>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Multimodal LLM Agent with Retrieval Augmented Planning</h3>
-                            <div class="subheading mb-3">NUS - Panasonic</div>
-                            <p>Developed <strong>RAP</strong>, a Multimodal planning agent which leverages past successful experiences to enhance decision-making process. Developed <strong>EnvBridge</strong>, a Multimodal embodied agent which can transfer knowledge from diverse embodied environments and enhance planning ability. SOTA results on text-only environments (ALFWorld, Webshop), Significant improvements on multimodal robotics benchmarks (Franka Kitchen, Meta-World, RLBench).</p>
-                            <p><strong>Key Words:</strong> Multimodal LLM Agents, Retrieval-Augmented Planning, Embodied AI, Cross-Environment Transfer</p>
+                    <!-- RAP -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">Multimodal LLM Agent with Retrieval Augmented Planning</h3>
+                                <div class="subheading">NUS - Panasonic</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Oct 2023 – May 2024</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oct 2023 - May 2024</span></div>
+                        <p>Developed <strong>RAP</strong>, a multimodal planning agent leveraging past successful experiences to enhance decision-making. Developed <strong>EnvBridge</strong>, a multimodal embodied agent transferring knowledge across diverse environments. Achieved SOTA on text-only environments (ALFWorld, Webshop) and significant improvements on multimodal robotics benchmarks (Franka Kitchen, Meta-World, RLBench).</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">LLM Agents</span>
+                            <span class="keyword-tag">Retrieval-Augmented Planning</span>
+                            <span class="keyword-tag">Embodied AI</span>
+                            <span class="keyword-tag">Cross-Environment Transfer</span>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Vision Model Scaling with Mixture of Experts</h3>
-                            <div class="subheading mb-3">HPC-AI Lab</div>
-                            <p>Developed large-scale vision models: <strong>Sparse-MLP</strong>, <strong>Widenet</strong> based on Mixture of Experts. Proposed a fully-MLP architecture with conditional computation in two directions and extended MoE to spatial dimension of image representation.</p>
-                            <p><strong>Key Words:</strong> Mixture of Experts, Vision Models, Conditional Computation, Large-scale Architecture Design</p>
+                    <!-- Vision MoE -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">Vision Model Scaling with Mixture of Experts</h3>
+                                <div class="subheading">HPC-AI Lab</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Mar 2021 – Jan 2022</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Mar 2021 – Jan 2022</span></div>
+                        <p>Developed large-scale vision models: <strong>Sparse-MLP</strong>, <strong>Widenet</strong> based on Mixture of Experts. Proposed a fully-MLP architecture with conditional computation in two directions and extended MoE to the spatial dimension of image representation.</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Mixture of Experts</span>
+                            <span class="keyword-tag">Vision Models</span>
+                            <span class="keyword-tag">Conditional Computation</span>
+                        </div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Open Source Projects-->
+            <!-- Open Source Projects -->
             <section class="resume-section" id="open-source-projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Open Source Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"><a href="https://github.com/hpcaitech/ColossalAI">Colossal-AI: Making large AI models cheaper, faster, and more accessible</a></h3>
-                            <div class="subheading mb-3">41k stars</div>
-                            <p>A collection of parallel components for distributed training of large deep learning models. Managed and contributed to Colossal-AI examples.</p>
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h3><a href="https://github.com/hpcaitech/ColossalAI" target="_blank" rel="noopener">Colossal-AI</a></h3>
+                            <span class="stars-badge"><i class="fas fa-star"></i> 41k</span>
                         </div>
+                        <p class="mb-0">Making large AI models cheaper, faster, and more accessible. A collection of parallel components for distributed training. Managed and contributed to Colossal-AI examples.</p>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"><a href="https://github.com/XueFuzhao/awesome-mixture-of-experts">awesome mixture-of-experts</a></h3>
-                            <div class="subheading mb-3">1.2k stars</div>
-                            <p>A collection of awesome Mixture of Experts papers and projects.</p>
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h3><a href="https://github.com/XueFuzhao/awesome-mixture-of-experts" target="_blank" rel="noopener">awesome-mixture-of-experts</a></h3>
+                            <span class="stars-badge"><i class="fas fa-star"></i> 1.2k</span>
                         </div>
+                        <p class="mb-0">A curated collection of Mixture of Experts papers and projects.</p>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"><a href="https://github.com/NUS-HPC-AI-Lab/MoST">MoST: Modality-Aware Mixture of Experts for Efficient Speech-Text Foundation Model</a></h3>
-                            <p>Official implementation of MoST, a novel speech-text foundation model featuring a Modality-Aware Mixture of Experts (MAMOE) architecture which directs tokens to specialized pathways for enhanced cross-modal understanding.</p>
-                        </div>
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3><a href="https://github.com/NUS-HPC-AI-Lab/MoST" target="_blank" rel="noopener">MoST</a></h3>
+                        <p class="mb-0">Official implementation of MoST, a speech-text foundation model with Modality-Aware Mixture of Experts (MAMOE) architecture for enhanced cross-modal understanding.</p>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"><a href="https://github.com/PanasonicConnect/rap">RAP: Retrieval-Augmented Planning with Contextual Memory for Multimodal LLM Agents</a></h3>
-                            <p>Official implementation of RAP, a Multimodal planning agent which leverage past successful experiences to enhance decision-making process.</p>
-                        </div>
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3><a href="https://github.com/PanasonicConnect/rap" target="_blank" rel="noopener">RAP</a></h3>
+                        <p class="mb-0">Official implementation of RAP, a multimodal planning agent leveraging past successful experiences to enhance decision-making.</p>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Professional Experience-->
+            <!-- Professional Experience -->
             <section class="resume-section" id="professional-experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Professional Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Tencent</h3>
-                            <div class="subheading mb-3">Research Intern</div>
-                            <div>Developed DiffuSpeech, the first diffusion-based speech-text language model supporting both understanding and generation. Collaborated on building the ThinkingTalk dataset and speech-text diffusion framework.</div>
-                            <p>Key Words: Diffusion Language Models, Speech-Text Generation, Multimodal Reasoning</p>
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">ARC Lab, Tencent</h3>
+                                <div class="subheading">Research Intern</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Sep 2025 – Feb 2026</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2025 - February 2026</span></div>
+                        <p>Developed DiffuSpeech, the first diffusion-based speech-text language model supporting both understanding and generation. Collaborated on building the ThinkingTalk dataset and speech-text diffusion framework.</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Diffusion LLM</span>
+                            <span class="keyword-tag">Speech-Text</span>
+                            <span class="keyword-tag">Multimodal Reasoning</span>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">HPC-AI Tech</h3>
-                            <div class="subheading mb-3">Deep Learning Engineer</div>
-                            <div>Colossal-AI, Colossal-AI Examples co-developer. Building the open domain dialog system with internet knowledge augmentation.</div>
-                            <p>Key Words: Colossal-AI, Open domain dialog, Internet knowledge agumentation</p>
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">HPC-AI Tech</h3>
+                                <div class="subheading">Deep Learning Engineer</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Feb 2022 – Dec 2022</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2022 - December 2022</span></div>
+                        <p>Colossal-AI and Colossal-AI Examples co-developer. Built an open domain dialog system with internet knowledge augmentation.</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Colossal-AI</span>
+                            <span class="keyword-tag">Distributed Training</span>
+                            <span class="keyword-tag">Dialog Systems</span>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Interactive Entertainment Group, Tencent</h3>
-                            <div class="subheading mb-3">Machine Learning Engineer Intern</div>
-                            <div>Data mining and data cleaning of users' comments on specific games. Built machine learning models to classify the emotional levels of comments.  Built deep learning abstractive text summarization models to extract the summary of comment contexts.</div>
-                            <p>Key Words: Data mining, Emotion classification, Abstractive text summarization</p>
+                    <div class="content-card mb-4 fade-in-section">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div>
+                                <h3 class="mb-0">Interactive Entertainment Group, Tencent</h3>
+                                <div class="subheading">Machine Learning Engineer Intern</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="date-badge text-primary">Mar 2020 – Jun 2020</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2020 - June 2020</span></div>
+                        <p>Data mining and cleaning of users' comments. Built ML models for emotion classification and deep learning abstractive text summarization.</p>
+                        <div class="keywords">
+                            <span class="keyword-tag">Data Mining</span>
+                            <span class="keyword-tag">NLP</span>
+                            <span class="keyword-tag">Text Summarization</span>
+                        </div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Skills-->
+            <!-- Skills -->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills & Technologies</h2>
-                    <div class="subheading mb-3"></div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            <strong>GPU Training:</strong> PyTorch, DeepSpeed, Megatron-LM, Colossal-AI, HuggingFace Transformers/Accelerate, vLLM, FlashAttention (NVIDIA GPU clusters)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            <strong>TPU Training:</strong> TensorFlow, JAX/Flax, Keras (Google Cloud TPU pods)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            <strong>Parallel Training & Optimization:</strong> Model parallel, tensor parallel, pipeline parallel, sequence parallel, data parallel, mixture-of-experts parallel training
-                        </li>
-                    </ul>
+                    <div class="skill-group fade-in-section">
+                        <div class="skill-group-title"><i class="fas fa-microchip me-2 text-primary"></i>GPU Training</div>
+                        <div class="skill-group-content">PyTorch, DeepSpeed, Megatron-LM, Colossal-AI, HuggingFace Transformers/Accelerate, vLLM, FlashAttention (NVIDIA GPU clusters)</div>
+                    </div>
+                    <div class="skill-group fade-in-section">
+                        <div class="skill-group-title"><i class="fas fa-cloud me-2 text-primary"></i>TPU Training</div>
+                        <div class="skill-group-content">TensorFlow, JAX/Flax, Keras (Google Cloud TPU pods)</div>
+                    </div>
+                    <div class="skill-group fade-in-section">
+                        <div class="skill-group-title"><i class="fas fa-network-wired me-2 text-primary"></i>Parallel Training & Optimization</div>
+                        <div class="skill-group-content">Model parallel, tensor parallel, pipeline parallel, sequence parallel, data parallel, mixture-of-experts parallel training</div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Interests-->
+            <!-- Activities & Interests -->
             <section class="resume-section" id="activities-interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Activities & Interests</h2>
-                    <p >During my undergraduate years, I was a member of the debate team of Mathematical Science school. I really enjoyed presenting evidence, defending and questioning arguments and developing persuasion techniques. And we won 2017 Fudan Debating Championship.</p>
-                    <p>Besides, I served as a volunteer mathematical teacher for kindergarten children in Yangpu district. I had a lot of fun introducing basic mathematical concepts and knowledge to children.
-                    </p>
-                    <p class="mb-0">In my free time, I enjoy reading science fictions. The three-body problem and Foundation series are my favourites</p>
+                    <p>During my undergraduate years, I was a member of the debate team of the Mathematical Science school. I really enjoyed presenting evidence, defending and questioning arguments, and developing persuasion techniques. We won the 2017 Fudan Debating Championship.</p>
+                    <p>I also served as a volunteer mathematics teacher for kindergarten children in Yangpu district, introducing basic mathematical concepts and knowledge.</p>
+                    <p class="mb-0">In my free time, I enjoy reading science fiction. <em>The Three-Body Problem</em> and the <em>Foundation</em> series are my favourites.</p>
                 </div>
             </section>
-            <hr class="m-0" />
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+            <!-- Last Updated -->
+            <div class="last-updated">
+                Last updated in February 2026
+            </div>
+        </div><!-- /.container-fluid -->
+        <!-- Bootstrap 5.3.3 JS (from CDN) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
         <script src="js/scripts.js"></script>
     </body>
 </html>
