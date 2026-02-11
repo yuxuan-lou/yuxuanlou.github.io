@@ -53,8 +53,14 @@ body {
     padding-top: 3.5rem;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-muted-custom);
+    background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #0f172a;
+    color: var(--text-muted-custom);
 }
 
 @media (min-width: 992px) {
@@ -111,7 +117,8 @@ a:hover {
 
 /* ----- 3. Sidebar Navigation ----- */
 #sideNav {
-    background: var(--sidebar-bg);
+    background-color: #0f172a !important;
+    background-image: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
     padding-left: 1rem;
     padding-right: 1rem;
     border: none;
@@ -144,6 +151,7 @@ a:hover {
         position: fixed;
         top: 0;
         left: 0;
+        right: auto !important;
         display: flex;
         flex-direction: column;
         width: var(--sidebar-width);
