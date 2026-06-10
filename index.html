@@ -34,6 +34,10 @@
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Yuxuan Lou | NUS Computer Science Ph.D." />
         <meta name="twitter:description" content="Ph.D. student at NUS working on diffusion large language models, mixture of experts, and multimodal foundation models." />
+        <meta name="twitter:image" content="https://yuxuanlou.info/assets/img/resume_2.jpg" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+        <link rel="canonical" href="https://yuxuanlou.info/" />
         <title>Yuxuan Lou | NUS Computer Science Ph.D.</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Preconnect for performance -->
@@ -48,7 +52,7 @@
         <!-- Bootstrap 5.3.3 CSS (from CDN, with built-in dark mode) -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
         <!-- Custom theme CSS -->
-        <link href="css/styles.css?v=3" rel="stylesheet" />
+        <link href="css/styles.css?v=4" rel="stylesheet" />
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json">
         {
@@ -68,7 +72,8 @@
             ],
             "sameAs": [
                 "https://github.com/yuxuan-lou",
-                "https://scholar.google.com/citations?user=UfOXNK8AAAAJ"
+                "https://scholar.google.com/citations?user=UfOXNK8AAAAJ",
+                "https://x.com/yuxuan_lou"
             ]
         }
         </script>
@@ -78,14 +83,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" data-bs-theme="dark">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Yuxuan Lou</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/resume_2.jpg" alt="Yuxuan Lou" width="160" height="160" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile-320.jpg" alt="Yuxuan Lou" width="160" height="160" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research-interest">Research Interest</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#grants">Grants</a></li>
@@ -120,10 +124,16 @@
                     <div class="social-icons mb-4">
                         <a class="social-icon" href="https://github.com/yuxuan-lou" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="https://scholar.google.com/citations?user=UfOXNK8AAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+                        <a class="social-icon" href="https://x.com/yuxuan_lou" target="_blank" rel="noopener" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                         <a class="social-icon" href="mailto:yuxuanlou@u.nus.edu" title="Email"><i class="fas fa-envelope"></i></a>
                         <a class="social-icon" href="assets/CV_Yuxuan_Lou(2026.5).pdf" target="_blank" rel="noopener" title="Download CV"><i class="fas fa-file-pdf"></i></a>
                     </div>
-                    <p class="lead mb-0">I am a Ph.D. student in Computer Science at the National University of Singapore, advised by <a href="https://www.comp.nus.edu.sg/~youy/">Prof. Yang You</a>. I received my B.Sc. in Applied Mathematics from Fudan University and M.Sc. in Statistics from NUS. I was also a research intern at Harvard University. My research interests lie in diffusion large language models, efficient LLM scaling with Mixture of Experts, and multimodal foundation model adaptation from large language models. I am currently working on speech-text diffusion models, scalable MoE architectures, and large-scale pretrained models.</p>
+                    <p class="lead mb-3">I am a Ph.D. student in Computer Science at the National University of Singapore, advised by <a href="https://www.comp.nus.edu.sg/~youy/">Prof. Yang You</a>. I received my B.Sc. in Applied Mathematics from Fudan University and M.Sc. in Statistics from NUS. I was also a research intern at Harvard University. I am currently working on speech-text diffusion models, scalable MoE architectures, and large-scale pretrained models.</p>
+                    <div class="interest-tags mb-0">
+                        <span class="interest-tag"><i class="fas fa-wave-square me-1"></i>Diffusion Large Language Models</span>
+                        <span class="interest-tag"><i class="fas fa-layer-group me-1"></i>Efficient LLM Scaling with Mixture of Experts</span>
+                        <span class="interest-tag"><i class="fas fa-shapes me-1"></i>Multimodal Foundation Model Adaptation</span>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -134,7 +144,7 @@
                     <div class="news-list">
                         <div class="news-item fade-in-section">
                             <span class="news-date">May 2026</span>
-                            <span class="news-text">Released three new papers: <a href="https://arxiv.org/abs/2605.07815"><strong>OrScale</strong></a> (<a href="https://github.com/NUS-HPC-AI-Lab/OrScale">code</a>) on orthogonalized optimization with layer-wise trust-ratio scaling, <strong>AsyncLane</strong> on diffusion language model decoding, and <strong>ECUpcycle</strong> on slice-structured expert-choice diffusion LM upcycling.</span>
+                            <span class="news-text">Released three new papers: <a href="https://arxiv.org/abs/2605.07815"><strong>OrScale</strong></a> (<a href="https://github.com/NUS-HPC-AI-Lab/OrScale">code</a>) on orthogonalized optimization with layer-wise trust-ratio scaling, <a href="https://arxiv.org/abs/2606.08411"><strong>AsyncLane</strong></a> on diffusion language model decoding, and <strong>ECUpcycle</strong> on slice-structured expert-choice diffusion LM upcycling.</span>
                         </div>
                         <div class="news-item fade-in-section">
                             <span class="news-date">May 2026</span>
@@ -156,43 +166,34 @@
                             <span class="news-date">Feb 2026</span>
                             <span class="news-text">Released <a href="https://github.com/yuxuan-lou/ClawTrade"><strong>ClawTrade</strong></a> — secure multi-broker trading middleware for AI agents.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Jan 2026</span>
                             <span class="news-text">Our paper <a href="https://arxiv.org/abs/2507.00390"><strong>MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE</strong></a> is accepted by <strong>ICLR 2026</strong>.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Jan 2026</span>
                             <span class="news-text">Our paper <a href="https://arxiv.org/abs/2601.22889"><strong>DiffuSpeech</strong></a> is released — the first diffusion-based speech-text language model supporting both understanding and generation.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Jan 2026</span>
                             <span class="news-text">Our paper <a href="https://arxiv.org/abs/2601.10272"><strong>MoST</strong></a> is released with <a href="https://github.com/NUS-HPC-AI-Lab/MoST">code</a> — a modality-aware MoE for speech-text foundation models.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Sep 2025</span>
                             <span class="news-text">Started research internship at <strong>Tencent</strong>, working on diffusion-based speech-text models.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Oct 2024</span>
                             <span class="news-text">Our paper <a href="https://arxiv.org/abs/2410.16919"><strong>EnvBridge</strong></a> is released — cross-environment knowledge transfer for embodied AI.</span>
                         </div>
-                        <div class="news-item fade-in-section">
+                        <div class="news-item news-item-extra d-none fade-in-section">
                             <span class="news-date">Feb 2024</span>
                             <span class="news-text">Our paper <a href="https://arxiv.org/abs/2402.03610"><strong>RAP</strong></a> is released — retrieval-augmented planning for multimodal LLM agents.</span>
                         </div>
                     </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Research Interest -->
-            <section class="resume-section" id="research-interest">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Research Interest</h2>
-                    <ul class="research-interest-list mb-0">
-                        <li>Diffusion Large Language Models</li>
-                        <li>Efficient Large Language Model Scaling with Mixture of Experts</li>
-                        <li>Multimodal Foundation Model Adaptation from Large Language Models</li>
-                    </ul>
+                    <button type="button" id="newsToggle" class="news-toggle mt-3" aria-expanded="false">
+                        <i class="fas fa-chevron-down me-1"></i>Show older news
+                    </button>
                 </div>
             </section>
             <hr class="m-0" />
@@ -249,13 +250,30 @@
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2605.07815" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                             <a href="https://github.com/NUS-HPC-AI-Lab/OrScale" class="pub-link" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Code</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{lou2026orscale,
+  title   = {OrScale: Orthogonalised Optimization with Layer-Wise Trust-Ratio Scaling},
+  author  = {Lou, Yuxuan and You, Yang},
+  journal = {arXiv preprint arXiv:2605.07815},
+  year    = {2026}
+}</pre></div>
                     </div>
                     <!-- AsyncLane -->
                     <div class="content-card mb-4 fade-in-section">
                         <h3>AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding</h3>
-                        <p class="pub-authors mb-1">Yingxuan Ren*, <strong>Yuxuan Lou*<sup>&dagger;</sup></strong>, Yong Liu, Pengcheng Fang, Ziming Wang, Pengfei Zhou, Yang You<sup>&dagger;</sup></p>
+                        <p class="pub-authors mb-1">Yingxuan Ren*, <strong>Yuxuan Lou*</strong>, Yong Liu, Pengcheng Fang, Ziming Wang, Pengfei Zhou, Yang You<sup>&dagger;</sup></p>
                         <span class="date-badge text-primary">2026</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2606.08411" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
+                        </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{ren2026asynclane,
+  title   = {AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding},
+  author  = {Ren, Yingxuan and Lou, Yuxuan and Liu, Yong and Fang, Pengcheng and Wang, Ziming and Zhou, Pengfei and You, Yang},
+  journal = {arXiv preprint arXiv:2606.08411},
+  year    = {2026}
+}</pre></div>
                     </div>
                     <!-- ECUpcycle -->
                     <div class="content-card mb-4 fade-in-section">
@@ -270,7 +288,14 @@
                         <span class="date-badge text-primary">2026</span>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2601.22889" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{lou2026diffuspeech,
+  title   = {DiffuSpeech: Silent Thought, Spoken Answer via Unified Speech-Text Diffusion},
+  author  = {Lou, Yuxuan and Wu, Ziming and Wang, Yaochen and Liu, Yong and Ren, Yingxuan and Lai, Fuming and Lian, Shaobing and Tang, Jie and You, Yang},
+  journal = {arXiv preprint arXiv:2601.22889},
+  year    = {2026}
+}</pre></div>
                     </div>
                     <!-- MoST -->
                     <div class="content-card mb-4 fade-in-section">
@@ -280,7 +305,30 @@
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2601.10272" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
                             <a href="https://github.com/NUS-HPC-AI-Lab/MoST" class="pub-link" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Code</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@inproceedings{lou2026most,
+  title     = {MoST: Modality-Aware Mixture of Experts for Efficient Speech-Text Foundation Model},
+  author    = {Lou, Yuxuan and Yang, Kai and You, Yang},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026}
+}</pre></div>
+                    </div>
+                    <!-- MoNE -->
+                    <div class="content-card mb-4 fade-in-section">
+                        <h3>MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE</h3>
+                        <p class="pub-authors mb-1">Geng Zhang, Yuxuan Han, <strong>Yuxuan Lou</strong>, Yiqi Zhang, Wangbo Zhao, Yang You</p>
+                        <span class="date-badge text-primary">ICLR 2026</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2507.00390" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
+                        </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@inproceedings{zhang2026mone,
+  title     = {MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE},
+  author    = {Zhang, Geng and Han, Yuxuan and Lou, Yuxuan and Zhang, Yiqi and Zhao, Wangbo and You, Yang},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026}
+}</pre></div>
                     </div>
                     <!-- EnvBridge -->
                     <div class="content-card mb-4 fade-in-section">
@@ -289,7 +337,14 @@
                         <span class="date-badge text-primary">2024</span>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2410.16919" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{kagaya2024envbridge,
+  title   = {EnvBridge: Bridging Diverse Environments with Cross-Environment Knowledge Transfer for Embodied AI},
+  author  = {Kagaya, Tomoyuki and Lou, Yuxuan and Yuan, Thong Jing and Lakshmi, Subramanian and Karlekar, Jayashree and Pranata, Sugiri and Murakami, Natsuki and Kinose, Akira and Oguri, Koki and Wick, Felix and You, Yang},
+  journal = {arXiv preprint arXiv:2410.16919},
+  year    = {2024}
+}</pre></div>
                     </div>
                     <!-- RAP -->
                     <div class="content-card mb-4 fade-in-section">
@@ -298,7 +353,14 @@
                         <span class="date-badge text-primary">2024</span>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2402.03610" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{kagaya2024rap,
+  title   = {RAP: Retrieval-Augmented Planning with Contextual Memory for Multimodal LLM Agents},
+  author  = {Kagaya, Tomoyuki and Lou, Yuxuan and Yuan, Thong Jing and Lakshmi, Subramanian and Karlekar, Jayashree and Pranata, Sugiri and Murakami, Natsuki and Kinose, Akira and Oguri, Koki and Wick, Felix and You, Yang},
+  journal = {arXiv preprint arXiv:2402.03610},
+  year    = {2024}
+}</pre></div>
                     </div>
                     <!-- Cross-token -->
                     <div class="content-card mb-4 fade-in-section">
@@ -307,7 +369,14 @@
                         <span class="date-badge text-primary">2022</span>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2109.02008" class="pub-link" target="_blank" rel="noopener"><i class="fas fa-file-alt me-1"></i>arXiv</a>
+                            <button type="button" class="pub-link bibtex-toggle"><i class="fas fa-quote-right me-1"></i>BibTeX</button>
                         </div>
+                        <div class="bibtex-block d-none"><button type="button" class="bibtex-copy" title="Copy BibTeX"><i class="far fa-copy"></i></button><pre>@article{lou2022crosstoken,
+  title   = {Cross-token Modeling with Conditional Computation},
+  author  = {Lou, Yuxuan and Xue, Fuzhao and Zheng, Zangwei and You, Yang},
+  journal = {arXiv preprint arXiv:2109.02008},
+  year    = {2022}
+}</pre></div>
                     </div>
                 </div>
             </section>
@@ -552,12 +621,16 @@
             </section>
             <!-- Last Updated -->
             <div class="last-updated">
-                Last updated in May 2026
+                &copy; 2026 Yuxuan Lou &middot; Last updated in June 2026
             </div>
         </div><!-- /.container-fluid -->
+        <!-- Back to Top -->
+        <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
         <!-- Bootstrap 5.3.3 JS (from CDN) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <!-- Custom JS -->
-        <script src="js/scripts.js?v=2"></script>
+        <script src="js/scripts.js?v=3"></script>
     </body>
 </html>

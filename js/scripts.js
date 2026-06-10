@@ -57,6 +57,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // News: show/hide older items
+    var newsToggle = document.getElementById('newsToggle');
+    if (newsToggle) {
+        newsToggle.addEventListener('click', function() {
+            var expanded = newsToggle.getAttribute('aria-expanded') === 'true';
+            document.querySelectorAll('.news-item-extra').forEach(function(item) {
+                item.classList.toggle('d-none', expanded);
+                if (!expanded) { item.classList.add('visible'); }
+            });
+            newsToggle.setAttribute('aria-expanded', String(!expanded));
+            newsToggle.innerHTML = expanded
+                ? '<i class="fas fa-chevron-down me-1"></i>Show older news'
+                : '<i class="fas fa-chevron-up me-1"></i>Show less';
+        });
+    }
+
+    // Publications: BibTeX toggle + copy
+    document.querySelectorAll('.bibtex-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var block = btn.closest('.content-card').querySelector('.bibtex-block');
+            if (block) { block.classList.toggle('d-none'); }
+        });
+    });
+    document.querySelectorAll('.bibtex-copy').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var pre = btn.parentElement.querySelector('pre');
+            if (pre && navigator.clipboard) {
+                navigator.clipboard.writeText(pre.textContent).then(function() {
+                    btn.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(function() {
+                        btn.innerHTML = '<i class="far fa-copy"></i>';
+                    }, 1500);
+                });
+            }
+        });
+    });
+
+    // Back to Top button
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            backToTop.classList.toggle('show', window.scrollY > 600);
+        }, { passive: true });
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // Scroll Reveal Animations
     var revealElements = document.querySelectorAll('.fade-in-section');
     if ('IntersectionObserver' in window) {

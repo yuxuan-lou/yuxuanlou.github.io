@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file /Users/yuxuan/Documents/yuxuanlou.github.io/assets/img/*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/yuxuan/Documents/yuxuanlou.github.io/assets/img/resume_2.jpg)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(sips -Z 320 -s format jpeg -s formatOptions 82 assets/img/resume_2.jpg --out assets/img/profile-320.jpg)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
