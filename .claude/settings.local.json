@@ -5,7 +5,17 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/yuxuan/Documents/yuxuanlou.github.io/assets/img/resume_2.jpg)",
       "WebFetch(domain:arxiv.org)",
       "Bash(sips -Z 320 -s format jpeg -s formatOptions 82 assets/img/resume_2.jpg --out assets/img/profile-320.jpg)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__list_connected_browsers",
+      "mcp__Claude_in_Chrome__select_browser",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__read_page",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__get_page_text",
+      "mcp__Claude_in_Chrome__find",
+      "mcp__Claude_in_Chrome__form_input"
     ]
   }
 }
