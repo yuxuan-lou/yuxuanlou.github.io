@@ -715,7 +715,220 @@ button.pub-link {
     }
 }
 
-/* ----- 19. Reduced Motion ----- */
+/* ----- 19. Blog ----- */
+/* Homepage blog card */
+.blog-card h3 a {
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.blog-card h3 a:hover {
+    color: var(--accent);
+}
+
+.blog-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+/* Blog post page layout (no sidebar) */
+body.blog-page {
+    padding-top: 0;
+}
+
+@media (min-width: 992px) {
+    body.blog-page {
+        padding-left: 0;
+    }
+}
+
+.blog-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1.25rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--divider);
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+
+[data-bs-theme="dark"] .blog-topbar {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.blog-topbar .dark-mode-toggle-wrapper {
+    position: static;
+    padding: 0;
+}
+
+.blog-topbar .dark-mode-toggle {
+    background: var(--keyword-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-muted-custom);
+}
+
+.blog-topbar .dark-mode-toggle:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+.blog-home-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted-custom);
+}
+
+.blog-home-link:hover {
+    color: var(--accent);
+}
+
+.blog-post-container {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 3rem;
+}
+
+.blog-post-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: 0.75rem;
+}
+
+.blog-post-meta {
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted-custom);
+    opacity: 0.75;
+    margin-bottom: 2.5rem;
+}
+
+.blog-post-body {
+    font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+.blog-post-body p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.blog-post-body blockquote {
+    margin: 0 0 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--section-alt);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: var(--text-muted-custom);
+}
+
+.blog-post-body ol {
+    padding-left: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-body ol li {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.blog-figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.blog-figure img,
+.blog-figure video {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+.blog-figure figcaption {
+    margin-top: 0.6rem;
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted-custom);
+    opacity: 0.8;
+}
+
+.blog-fn {
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72em;
+}
+
+.blog-fn a {
+    font-weight: 600;
+}
+
+.blog-footnotes {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--divider);
+}
+
+.blog-footnotes h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-footnotes ol {
+    padding-left: 1.4rem;
+    margin-bottom: 0;
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-muted-custom);
+}
+
+.blog-footnotes ol li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-footnotes ol li:target {
+    background: var(--accent-light);
+    border-radius: 0.25rem;
+}
+
+.blog-fn-back {
+    font-size: 0.85em;
+}
+
+.blog-comments {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--divider);
+}
+
+.blog-comments h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+body.blog-page .last-updated {
+    padding: 2rem 0 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .blog-post-container {
+        padding-top: 2rem;
+    }
+
+    .blog-post-title {
+        font-size: 1.55rem;
+    }
+}
+
+/* ----- 20. Reduced Motion ----- */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
