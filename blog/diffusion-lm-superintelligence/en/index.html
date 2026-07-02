@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <!-- Prevent flash of wrong theme -->
+        <script>
+            (function() {
+                var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-bs-theme', t);
+            })();
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4W0J4WZRP"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D4W0J4WZRP', {
+                'cookie_domain': 'yuxuanlou.info',
+                'cookie_flags': 'SameSite=None;Secure'
+            });
+        </script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Starting from Heptapod B in Story of Your Life: is left-to-right generation a necessity of intelligence, or a human prior injected into our models? Diffusion language models offer a non-linear, non-causal way of generating language." />
+        <meta name="author" content="Yuxuan Lou" />
+        <!-- Open Graph -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Why Diffusion Language Models Could Be Closer to Superintelligence" />
+        <meta property="og:description" content="Starting from Heptapod B in Story of Your Life: when language generation is no longer bound to a left-to-right order, can models reach ways of thinking and levels of intelligence beyond the human?" />
+        <meta property="og:url" content="https://yuxuanlou.info/blog/diffusion-lm-superintelligence/en/" />
+        <meta property="og:image" content="https://yuxuanlou.info/assets/img/resume_2.jpg" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Why Diffusion Language Models Could Be Closer to Superintelligence" />
+        <meta name="twitter:description" content="When language generation is no longer bound to a left-to-right order, can models reach ways of thinking and levels of intelligence beyond the human?" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+        <link rel="canonical" href="https://yuxuanlou.info/blog/diffusion-lm-superintelligence/en/" />
+        <link rel="alternate" hreflang="zh-CN" href="https://yuxuanlou.info/blog/diffusion-lm-superintelligence/" />
+        <link rel="alternate" hreflang="en" href="https://yuxuanlou.info/blog/diffusion-lm-superintelligence/en/" />
+        <title>Why Diffusion Language Models Could Be Closer to Superintelligence | Yuxuan Lou</title>
+        <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico" />
+        <!-- Preconnect for performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <!-- Google Fonts (css2 API with display=swap) -->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+        <!-- Font Awesome 6 CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap 5.3.3 CSS (from CDN, with built-in dark mode) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <!-- Custom theme CSS -->
+        <link href="../../../css/styles.css?v=6" rel="stylesheet" />
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Why Diffusion Language Models Could Be Closer to Superintelligence",
+            "author": { "@type": "Person", "name": "Yuxuan Lou", "url": "https://yuxuanlou.info" },
+            "datePublished": "2026-07-02",
+            "inLanguage": "en",
+            "url": "https://yuxuanlou.info/blog/diffusion-lm-superintelligence/en/"
+        }
+        </script>
+    </head>
+    <body class="blog-page">
+        <!-- Top Bar -->
+        <nav class="blog-topbar">
+            <a class="blog-home-link" href="../../../index.html"><i class="fas fa-arrow-left me-2"></i>Back to Home</a>
+            <div class="dark-mode-toggle-wrapper">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon" id="darkModeIcon"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Article -->
+        <main class="blog-post-container">
+            <article class="blog-post">
+                <header class="blog-post-header">
+                    <h1 class="blog-post-title">Why Diffusion Language Models Could Be Closer to Superintelligence</h1>
+                    <div class="blog-post-meta">Yuxuan Lou &middot; July 2026 &middot; <a href="../">中文版</a></div>
+                </header>
+                <div class="blog-post-body">
+                    <blockquote>Writing from left to right, one word after another&mdash;is that a necessity of intelligence, or merely a human habit? If an intelligence could express itself out of order&mdash;setting down the beginning and the ending at the same time&mdash;would the world it sees still be the same one?</blockquote>
+                    <p>In the science-fiction novella <em>Story of Your Life</em>, an alien species known as the heptapods arrives on Earth. Linguist Louise Banks is recruited by the military to communicate with the visitors and find out why they have come. In the course of this exchange, Louise learns their written language, &ldquo;Heptapod B&rdquo;. Unlike human languages, it is not laid out linearly along a direction of writing; instead, it emerges as a whole, in circular form. Before a heptapod &ldquo;writes&rdquo;, it already knows the complete shape of everything it wants to express, and then draws the entire passage at once. <em>Arrival</em>, the film adapted from the novella, vividly depicts how Heptapod B is written:</p>
+                    <figure class="blog-figure">
+                        <img src="../heptapod-b.gif" alt="The writing process of the alien script Heptapod B, as depicted in the film Arrival" loading="lazy" />
+                        <figcaption>The writing process of the alien script &ldquo;Heptapod B&rdquo;, as depicted in the film <em>Arrival</em></figcaption>
+                    </figure>
+                    <p>As the communication deepens, Louise realizes that the heptapods&rsquo; language embodies the way they perceive the world: their physics is built on teleological principles (much like Fermat&rsquo;s principle of least time, where light seems to &ldquo;know in advance&rdquo; the endpoint it will reach), and on that foundation they know the past, present, and future simultaneously. As Louise grows more fluent in Heptapod B, the structure of her own consciousness begins to change. Like the heptapods, she starts to experience time non-linearly; she begins to &ldquo;remember&rdquo; the future, including the entire life of her future daughter. &ldquo;Story of Your Life&rdquo; is both the title of the novella and the letter Louise writes to her daughter&mdash;a letter in which she recounts, in the second person, fragments of her yet-unborn daughter&rsquo;s life: conception, birth, growing up, the small details of living, all the way to the final ending.</p>
+                    <p>Ted Chiang&rsquo;s novella contains two intriguing and important ideas: 1. Language is not merely a tool for communication&mdash;people voice their thoughts through language, but language in turn shapes the way they perceive the world. 2. The world is deterministic; the future is predictable, or rather &ldquo;known in advance&rdquo;. The so-called past, present, future, and free will are only how humans experience the world&mdash;perhaps even an illusion. Combined, the two form a bold conjecture: if humans were to abandon their linear, causal way of speaking and writing, reshaping language into a holistic form of expression, they could change the way they see and understand the world&mdash;and thereby perceive the past, present, and future all at once.</p>
+                    <p>Let us turn our gaze from science fiction back to the real world, and to large language models. Since the debut of ChatGPT at the end of 2022, large language models (LLMs) have rapidly become the most important achievement in artificial intelligence, reshaping industry after industry while advancing at breakneck speed. Today, their capabilities have long surpassed what anyone initially imagined. Agents built around LLMs can serve as everyday personal assistants (OpenClaw) and complete complex, long-horizon programming tasks (Claude Code, Codex). LLM-based reasoning models have reached the frontier of mathematical research (in May 2026, OpenAI&rsquo;s general reasoning model autonomously disproved the &ldquo;unit distance conjecture&rdquo; posed by mathematician Paul Erd&#337;s in 1946). The foundation beneath these skyscrapers consists of two core techniques: 1. sequence models based on the Transformer architecture; 2. training and inference based on next-token prediction. Transformer models use self-attention to learn how strongly elements at different positions of a sequence influence one another, while next-token prediction imitates the human writing process: given what has already been written (the context), write what comes next.</p>
+                    <p>Next-token prediction is undeniably an efficient paradigm: it lets models learn from humanity&rsquo;s vast corpus of text without any extra supervision signal, and it keeps training and inference consistent with each other. But one thing is often overlooked: next-token prediction is itself an extremely strong assumption&mdash;the word to be written now is determined by the part already written. Once the current word is decided, it merges with the history to determine the words of the future. This way of writing matches the human habit of causal inference, and the language models trained on it are today&rsquo;s mainstream LLMs: autoregressive language models. In <em>Story of Your Life</em>, it is precisely this causal mode of thinking that confines humans to experiencing time linearly&mdash;past, present, and future in strict order, with the future unknowable. And this has been inherited wholesale by autoregressive modeling: through the causal mask, self-attention allows each token to see only the tokens that come before it, never the future.</p>
+                    <p>Artificial intelligence models are not born with humanity&rsquo;s millennia of accumulated feeling for the passage of time, nor with the tacit, linear mode of thinking built upon it. So for models striving toward ever-higher intelligence, is this writing paradigm&mdash;inherited from the inertia of human causal reasoning&mdash;a help, or a constraint?</p>
+                    <p>To answer this question, we can look back at a model that already achieved superintelligence in a specific domain: AlphaGo-Zero, in the game of Go. Early versions of AlphaGo first learned by imitating human game records, then strengthened themselves through self-play. AlphaGo-Zero, by contrast, discarded the step of learning from human games entirely and evolved purely through self-play. In the end, AlphaGo-Zero surpassed the Go AIs trained on human games, and surpassed human players by an even wider margin. Its style of play broke free from the experience and established patterns humans had accumulated over centuries&mdash;and even ended up offering human players a new paradigm to learn from.</p>
+                    <figure class="blog-figure">
+                        <img src="../alphagozero-results.png" alt="AlphaGo-Zero left human experience behind and reached a higher level of Go intelligence" loading="lazy" />
+                        <figcaption>AlphaGo-Zero left human experience behind and reached a higher level of Go intelligence</figcaption>
+                    </figure>
+                    <p>If Richard Sutton&rsquo;s <em>The Bitter Lesson</em><sup class="blog-fn"><a id="fnref-1" href="#fn-1">[1]</a></sup> teaches us the importance of scaling for the evolution of AI, then the success of AlphaGo-Zero teaches us that human prior knowledge is not always reliable for that evolution.</p>
+                    <p>Of course, AlphaGo-Zero cannot be transplanted directly onto language: Go has a clear win-or-lose signal, so the model can obtain supervision from self-play and abandon human data altogether, whereas language models must still learn from human text&mdash;there is no &ldquo;completely discarding human experience&rdquo; here. But the real point of the analogy is this: human priors are not necessarily the road to higher intelligence&mdash;and the left-to-right order of generation is precisely one of the priors we inject into our models almost without reflection. It comes from human writing habits and causal intuition, but it is not necessarily a requirement of intelligence itself.</p>
+                    <p>It is undeniable that, building on &ldquo;causal inference&rdquo;, autoregressive language models can go on to learn the human way of &ldquo;reasoning&rdquo;, and reasoning models do indeed help humans solve very complex problems. But left-to-right reasoning also brings dilemmas of its own making: when facing tasks that require global planning (think of Sudoku), a sequence of local optima is often not the global optimum; and if an earlier step of reasoning is wrong, causal inference compounds the error&mdash;all of which forces the reasoning process into trial-and-error and backtracking. And so a fascinating possibility emerges: if a language model gave up the fixed, sequential generation paradigm, could it, like AlphaGo-Zero, reach ways of thinking and levels of intelligence beyond the human?</p>
+                    <p>Compared with autoregressive models that predict the next token, diffusion language models offer a highly promising candidate answer for intelligence beyond the human&mdash;a way of generating language that happens to coincide with &ldquo;Heptapod B&rdquo;: a diffusion language model does not strictly enforce a left-to-right writing order; the entire passage emerges as a whole through &ldquo;denoising&rdquo;.</p>
+                    <p>Concretely, during training, a diffusion language model adds noise to unlabeled text, with the training objective of recovering the original text from the noise. During inference, the text to be generated develops step by step out of noise into its final form. Throughout this process, the model need not follow a left-to-right writing order: the future (text that comes later) and the present (the middle) may well appear before the past (text that comes earlier). If we regard writing as a process of recovering &ldquo;truth&rdquo; from &ldquo;chaos&rdquo;, then the truth a diffusion language model recovers carries a kind of temporal equality and causal indifference&mdash;present, past, and future can emerge together, with no obligation to obey the strict linear order of past, present, future that autoregressive models must follow.</p>
+                    <figure class="blog-figure">
+                        <video src="../gemini-diffusion-example.mp4" controls muted playsinline preload="metadata"></video>
+                        <figcaption>The generation process of Google&rsquo;s diffusion language model, Gemini Diffusion</figcaption>
+                    </figure>
+                    <p>Some may object: words and language are merely carriers of knowledge and wisdom&mdash;when we learn from books and papers, what we learn is the information and ideas behind the symbols, regardless of which language we read or write. But &ldquo;language shapes consciousness&rdquo; is not merely a science-fiction fantasy. The weak version of the Sapir&ndash;Whorf hypothesis (that language influences thought) has considerable empirical support. For example, the Australian Aboriginal language Guugu Yimithirr uses no body-centered directional words like &ldquo;left/right&rdquo;, relying instead on absolute directions such as north, south, east, and west&mdash;and its speakers develop an unusually precise sense of orientation. Heidegger wrote in the <em>Letter on Humanism</em> that &ldquo;language is the house of Being&rdquo; (Die Sprache ist das Haus des Seins): language is the place where Being is cleared and revealed (aletheia, unconcealment). For Heidegger, the language we dwell in opens up a particular world and lets beings appear in a particular way. The &ldquo;Heptapod B&rdquo; of <em>Story of Your Life</em> opens up a world in which all times are co-present&mdash;future and present appearing together. This resonates with Heidegger&rsquo;s account of logos as &ldquo;gathering&rdquo; (Versammlung): not a linear laying-out, but bringing a whole into the open at a single stroke. Our understanding of wisdom&mdash;indeed of the world itself&mdash;remains shallow: to this day, intelligence has no precise definition. Under these circumstances, we have good reason to take seriously the possibility that a non-linear, non-causal language could give rise to a cognition of the world that is different from&mdash;perhaps even beyond&mdash;the human one.</p>
+                    <p>Admittedly, diffusion language models do not construct a brand-new language; they still learn from human text, and what they ultimately produce is still human writing arranged in a line. But remember: the letter Louise writes to her daughter is still line after line of left-to-right English&mdash;yet the consciousness that wrote it has been utterly transformed. For a model, its &ldquo;cognition&rdquo; resides precisely in the process of computation: once generation is no longer constrained by the causal mask, the way the model views a passage of text&mdash;which parts are settled first, which parts determine one another&mdash;is already fundamentally different from that of an autoregressive model.</p>
+                    <p>Even setting aside the metaphysical hypothesis that diffusion language models are closer to superintelligence, today&rsquo;s diffusion language models have already demonstrated practical value and application potential that cannot be ignored:</p>
+                    <ol>
+                        <li><strong>A higher learning ceiling when data is limited:</strong> the paper <em>Diffusion Language Models are Super Data Learners</em><sup class="blog-fn"><a id="fnref-2" href="#fn-2">[2]</a></sup> reveals that when training data has to be repeated, diffusion language models are harder to overfit than autoregressive ones and possess a higher ceiling of learning capacity. Model sizes keep scaling up; if the growth of data slows or stalls, diffusion language models may be able to reach higher levels of intelligence through repeated learning.</li>
+                        <li><strong>Faster inference for local deployment:</strong> when a model is deployed and run locally, there is usually only one inference request at a time (so-called batch-1 inference). An autoregressive language model generates only one token per forward pass; in this setting the chip&rsquo;s compute units are poorly utilized, and inference latency is bounded mainly by memory bandwidth. A diffusion language model generates multiple tokens per forward pass, improving compute utilization and achieving faster inference. According to the official DiffusionGemma blog<sup class="blog-fn"><a id="fnref-3" href="#fn-3">[3]</a></sup>, with the same chip and model size, a diffusion language model runs four times faster than an autoregressive one on batch-1 inference.</li>
+                        <li><strong>A unified continuous modeling paradigm for multimodality:</strong> when an autoregressive language model wants to incorporate other modalities (vision, audio, and so on), it must discretize their representations in order to fit the next-token-prediction paradigm&mdash;a modeling step that inevitably loses information. As continuous diffusion language models mature, diffusion offers a unified modeling paradigm over continuous representations for language, vision, and audio alike; the techniques diffusion models have developed for image, audio, and video generation also have room to generalize, opening the door to faster, higher-quality multimodal generation.</li>
+                    </ol>
+                    <p>Foreseeing the future has always been humanity&rsquo;s image of ultimate wisdom. Diffusion language models, from the angle of how the form of expression shapes consciousness, offer another possible way of perceiving the world. Perhaps, within a nutshell of electrical signals, there really could grow a superintelligence that walks freely in every direction of time, exploring an infinite universe.</p>
+                </div>
+                <footer class="blog-footnotes">
+                    <h2>Notes</h2>
+                    <ol>
+                        <li id="fn-1">Rich Sutton, <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank" rel="noopener"><em>The Bitter Lesson</em></a>, 2019. <a class="blog-fn-back" href="#fnref-1" aria-label="Back to text">&#8617;</a></li>
+                        <li id="fn-2"><a href="https://arxiv.org/abs/2511.03276" target="_blank" rel="noopener"><em>Diffusion Language Models are Super Data Learners</em></a>, arXiv:2511.03276. <a class="blog-fn-back" href="#fnref-2" aria-label="Back to text">&#8617;</a></li>
+                        <li id="fn-3">Official DiffusionGemma blog: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank" rel="noopener">Faster text generation with DiffusionGemma</a>. <a class="blog-fn-back" href="#fnref-3" aria-label="Back to text">&#8617;</a></li>
+                    </ol>
+                </footer>
+            </article>
+            <!-- Comments (giscus, backed by GitHub Discussions) -->
+            <section class="blog-comments">
+                <h2><i class="far fa-comments me-2 text-primary"></i>Comments</h2>
+                <div id="giscus-container"></div>
+            </section>
+            <div class="last-updated">
+                &copy; 2026 Yuxuan Lou
+            </div>
+        </main>
+        <!-- Back to Top -->
+        <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <!-- Custom JS (dark mode toggle, back to top) -->
+        <script src="../../../js/scripts.js?v=3"></script>
+        <!-- giscus comments, theme synced with site dark mode -->
+        <script>
+            (function () {
+                function giscusTheme() {
+                    return document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
+                }
+                var s = document.createElement('script');
+                s.src = 'https://giscus.app/client.js';
+                s.async = true;
+                s.crossOrigin = 'anonymous';
+                var attrs = {
+                    'data-repo': 'yuxuan-lou/yuxuanlou.github.io',
+                    'data-repo-id': 'R_kgDOGIU3XA',
+                    'data-category': 'Announcements',
+                    'data-category-id': 'DIC_kwDOGIU3XM4C1wmO',
+                    'data-mapping': 'pathname',
+                    'data-strict': '0',
+                    'data-reactions-enabled': '1',
+                    'data-emit-metadata': '0',
+                    'data-input-position': 'top',
+                    'data-theme': giscusTheme(),
+                    'data-lang': 'en',
+                    'data-loading': 'lazy'
+                };
+                Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+                document.getElementById('giscus-container').appendChild(s);
+                // Keep giscus theme in sync with the site dark-mode toggle
+                new MutationObserver(function () {
+                    var iframe = document.querySelector('iframe.giscus-frame');
+                    if (iframe) {
+                        iframe.contentWindow.postMessage(
+                            { giscus: { setConfig: { theme: giscusTheme() } } },
+                            'https://giscus.app'
+                        );
+                    }
+                }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
+            })();
+        </script>
+    </body>
+</html>
